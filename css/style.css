@@ -4,6 +4,7 @@
 
 
 body{
+  background-color: gray;
   margin: 0;
   padding: 0;
 }
@@ -41,6 +42,57 @@ body{
 
 .navbar-links li:hover{
   background-color: #555;
+}
+
+.text{
+  margin-left: 15%;
+  margin-right: 15%;
+  border: solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.text h2{
+  text-align: center;
+  color: black;
+}
+
+.text p{
+  color:white;
+  margin-left: 15px;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.text img{
+  width: 50%;
+  margin-bottom: 25px;
+}
+
+.display-members{
+  display: flex;
+  justify-content: space-around;
+}
+
+.members{
+ text-align: center;
+ color: black;
+}
+
+.members img{
+  width: 70%;
+}
+
+.parallax{
+  background-image: url(https://i0.wp.com/www.nintendo-town.fr/wp-content/uploads/2020/09/RollercoasterTycoon3CompleteEdition_01.jpg?ssl=1);
+  width: 1900px;
+  height: 1000px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .toggle-button{
