@@ -52,18 +52,28 @@ function create() {
 
     // Here we create the ground.
     var ground = platforms.create(0, game.world.height - 64, 'ground');
-
+    var ground1 = platforms.create(0, game.world.height - 34, 'ground');
+    
     //  Scale it to fit the width of the game (the original sprite is 400x32 in size)
     ground.scale.setTo(2, 2);
 
     //  This stops it from falling away when you jump on it
     ground.body.immovable = true;
+    
+    //  Scale it to fit the width of the game (the original sprite is 400x32 in size)
+    ground1.scale.setTo(7, 10);
+
+    //  This stops it from falling away when you jump on it
+    ground1.body.immovable = true;
 
     //  Now let's create two ledges
     var ledge = platforms.create(400, 400, 'ground');
     ledge.body.immovable = true;
 
     ledge = platforms.create(-150, 250, 'ground');
+    ledge.body.immovable = true;
+
+    ledge = platforms.create(950, 200, 'ground');
     ledge.body.immovable = true;
 
     // The player and its settings
@@ -77,9 +87,17 @@ function create() {
     player.body.gravity.y = 800;
     player.body.collideWorldBounds = true;
 
+
+    //cam
+    //this.cameras.main.setBounds(0,0, 10000, 600);
+    //this.physics.world.bounds.width = 10000;
+    //this.physics.world.bounds.height = 600;
+
     //  Our two animations, walking left and right.
     player.animations.add('left', [0, 1, 2, 3], 10, true);
     player.animations.add('right', [5, 6, 7, 8], 10, true);
+
+    //this.cameras.main.startFollow(this.player);
 
     //  Finally some stars to collect
     stars = game.add.group();
