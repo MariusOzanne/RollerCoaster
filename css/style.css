@@ -222,3 +222,15 @@ body{
     color: #24262b;
     background-color: #ffffff;
 }
+
+.game-button{
+  margin: 0px 20px;
+  font-size: 25px;
+  padding: 7px;
+  border: 2px solid;
+  color: #222;
+  text-decoration: none;
+  border-color: rgb(185, 29, 29);
+  margin-left: 40%;
+
+}
