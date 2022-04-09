@@ -1,14 +1,16 @@
 import MainScene from "./MainScene.js";
 
 const config = {
-    width:520,
-    height:520,
+    width:800,
+    height:640,
     backgroundColor: '#999999',
     type: Phaser.Auto,
     parent: 'platformer',
     scene:[MainScene],
     scale: {
         zoom:2,
+        // mode: Phaser.Scale.RESIZE,
+        // autoCenter: Phaser.Scale.CENTER_BOTH
     },
     physics: {
         default: 'matter',
