@@ -224,6 +224,7 @@ body{
 }
 
 .game-button{
+  width: 100%;
   margin: 0px 20px;
   font-size: 25px;
   padding: 7px;
@@ -232,5 +233,22 @@ body{
   text-decoration: none;
   border-color: rgb(185, 29, 29);
   margin-left: 40%;
+  resize: vertical;
 
+}
+
+.form-footer{
+  color: #bbbbbb;
+}
+
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+.play-boutton{
+  width: 100%;
 }
