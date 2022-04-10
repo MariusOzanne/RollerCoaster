@@ -24,7 +24,7 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
         return this.body.velocity;
     }
 
-    update(){
+    update(){d
         
         const speed = 2.5;
         let playerVelocity = new Phaser.Math.Vector2();
@@ -46,5 +46,8 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
         }else {
             this.anims.play('male_character_idle',true);
         }
+        // if ((this.inputKeys.space.isDown)) {
+        //     this.player.setVelocityY(-300);
+        // }
     }
 }

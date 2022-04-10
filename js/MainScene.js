@@ -15,7 +15,7 @@ export default class MainScene extends Phaser.Scene {
     }
 
     create() {
-        this.add.image(0, 0,'tiles') 
+        // this.add.image(0, 0,'tiles') 
     /*     const map = this.make.tilemap({ key: 'map' });
         const tileset = map.addTilesetImage('Solaria', 'tiles');
         const Ground = map.createStaticLayer('Ground', tileset, 0, 200);
@@ -24,9 +24,9 @@ export default class MainScene extends Phaser.Scene {
         // map.createStaticLayer('Water',tileset);
         // map.createStaticLayer('Wall',tileset);
 
-        const map = this.make.tilemap({ key: 'map' });
-        const tileset = map.addTilesetImage('platformPack_tilesheet', 'tiles');
-        const platforms = map.createStaticLayer('platforms', tileset, 0, 200);
+        // const map = this.make.tilemap({ key: 'map' });
+        // const tileset = map.addTilesetImage('platformPack_tilesheet', 'tiles');
+        // const platforms = map.createStaticLayer('platforms', tileset, 0, 200);
 
         this.player = new Player({scene:this,x:0,y:0,texture:'male_character',frame:'walking1'});
         let textPlayer = new Player({scene:this,x:100,y:100,texture:'male_character',frame:'walking1'});
