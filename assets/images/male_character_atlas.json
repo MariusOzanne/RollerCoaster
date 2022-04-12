@@ -4,7 +4,7 @@
             "filename": "walking2",
             "frame": {
                 "w": 128,
-                "h": 128,
+                "h": 80,
                 "x": 1,
                 "y": 1
             },

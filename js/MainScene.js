@@ -5,7 +5,8 @@ const config = {
     heigth: 640,
     scale: {
       mode: Phaser.Scale.RESIZE,
-      autoCenter: Phaser.Scale.CENTER_BOTH
+      autoCenter: Phaser.Scale.CENTER_BOTH,
+      //zoom: 2,
     },
     scene: {
       preload,
@@ -57,6 +58,9 @@ const config = {
     this.player.setCollideWorldBounds(true); 
     this.physics.add.collider(this.player, platforms);
     this.player.setScale(1, 1);
+    this.cameras.main.setBounds(0, 0, backgroundImage.displayWidth, backgroundImage.displayHeigth);
+    this.cameras.main.startFollow(this.player);
+    
  
     this.anims.create({
       key: 'male_character_walk1',
@@ -68,6 +72,7 @@ const config = {
       frameRate: 10,
       repeat: -1
     });
+
   
     this.anims.create({
       key: 'idle',
