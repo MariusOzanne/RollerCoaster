@@ -1,0 +1,196 @@
+{
+    "anims": [
+        {
+            "key": "jump",
+            "type": "frames",
+            "repeat": -1,
+            "frameRate": 13,
+            "frames": [
+                {
+                    "key": "perso",
+                    "frame": "jump_(1)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "jump_(2)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "jump_(3)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "jump_(5)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "jump_(6)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "jump_(7)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "jump_(8)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "jump_(9)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "jump_(10)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "jump_(11)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "jump_(12)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "jump_(13)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "jump_(15)"
+                }
+            ]
+        },
+        {
+            "key": "run",
+            "type": "frames",
+            "repeat": -1,
+            "frameRate": 20,
+            "frames": [
+                {
+                    "key": "perso",
+                    "frame": "run_(1)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "run_(2)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "run_(3)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "run_(4)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "run_(5)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "run_(6)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "run_(7)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "run_(8)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "run_(9)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "run_(10)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "run_(11)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "run_(12)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "run_(13)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "run_(15)"
+                }
+            ]
+        },
+        {
+            "key": "idle",
+            "type": "frames",
+            "repeat": -1,
+            "frameRate": 14,
+            "frames": [
+                {
+                    "key": "perso",
+                    "frame": "idle_(1)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "idle_(2)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "idle_(3)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "idle_(4)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "idle_(5)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "idle_(6)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "idle_(7)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "idle_(8)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "idle_(9)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "idle_(10)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "idle_(11)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "idle_(12)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "idle_(13)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "idle_(14)"
+                },
+                {
+                    "key": "perso",
+                    "frame": "idle_(15)"
+                }
+            ]
+        }
+    ]
+}

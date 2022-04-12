@@ -1,12 +1,12 @@
 const config = {
     type: Phaser.AUTO,
     parent: 'game',
-    width: 1000,
-    heigth: 640,
+    width: 3000,
+    heigth: 1500,
     scale: {
       mode: Phaser.Scale.RESIZE,
       autoCenter: Phaser.Scale.CENTER_BOTH,
-      //zoom: 2,
+      zoom: 2,
     },
     scene: {
       preload,
@@ -33,8 +33,8 @@ const config = {
 
     this.load.tilemapTiledJSON('map', 'assets/tilemaps/level1.json');
 
-    this.load.atlas('player', 'assets/images/male_character.png',
-      'assets/images/male_character_atlas.json');
+    this.load.atlas('player', 'assets/images/perso.png',
+      'assets/images/perso_atlas.json');
   }
   
   function create() {
@@ -53,7 +53,7 @@ const config = {
     platforms.setCollisionByExclusion(-1, true);
   
    
-    this.player = this.physics.add.sprite(50, 1400, 'player');
+    this.player = this.physics.add.sprite(50, 1000, 'player');
     this.player.setBounce(0.1); 
     this.player.setCollideWorldBounds(true); 
     this.physics.add.collider(this.player, platforms);
@@ -103,12 +103,12 @@ const config = {
   
   function update() {
     if (this.cursors.left.isDown) {
-      this.player.setVelocityX(-200);
+      this.player.setVelocityX(-400);
       if (this.player.body.onFloor()) {
         this.player.play('walk', true);
       }
     } else if (this.cursors.right.isDown) {
-      this.player.setVelocityX(200);
+      this.player.setVelocityX(400);
       if (this.player.body.onFloor()) {
         this.player.play('walk', true);
       }
