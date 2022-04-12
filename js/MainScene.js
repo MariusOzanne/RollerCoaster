@@ -32,8 +32,8 @@ const config = {
 
     this.load.tilemapTiledJSON('map', 'assets/tilemaps/level1.json');
 
-    this.load.atlas('player', 'assets/images/kenney_player.png',
-      'assets/images/kenney_player_atlas.json');
+    this.load.atlas('player', 'assets/images/male_character.png',
+      'assets/images/male_character_atlas.json');
   }
   
   function create() {
@@ -56,10 +56,10 @@ const config = {
     this.player.setBounce(0.1); 
     this.player.setCollideWorldBounds(true); 
     this.physics.add.collider(this.player, platforms);
-    this.player.setScale(0.5, 0.5);
+    this.player.setScale(1, 1);
  
     this.anims.create({
-      key: 'walk',
+      key: 'male_character_walk1',
       frames: this.anims.generateFrameNames('player', {
         prefix: 'robo_player_',
         start: 2,
@@ -71,7 +71,7 @@ const config = {
   
     this.anims.create({
       key: 'idle',
-      frames: [{ key: 'player', frame: 'robo_player_0' }],
+      frames: [{ key: 'player', frame: 'male_character_walk' }],
       frameRate: 10,
     });
 
