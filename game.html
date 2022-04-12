@@ -4,27 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="./css/game.css">
   <title>Platformer</title>
-  <style>
-    html,
-    body {
-      margin: 0 auto;
-      padding: 0;
-      /* width: 50%;
-      height: 50%; */
-    }
-
-    #game {
-      margin: 10px auto;
-      padding: 0;
-      width: 4200px;
-      height: 1700px;
-    }
-  </style>
 </head>
 
 <body>
-  <div id="game"></div>
+  <div class="container">
+    <div class="game" id="game"></div>
+    <br>
+    <button onclick="var el = document.getElementById('game'); el.webkitRequestFullscreen();">Full Screen ici</button>
+  </div>
   <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
   <script src="/js/MainScene.js"></script>
 </body>

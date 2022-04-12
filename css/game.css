@@ -1,0 +1,42 @@
+body {
+    margin: 0  auto;
+    padding: 0;
+}
+    .game {
+    padding: 10px;
+    height: 400px;
+    width: 500px;
+    background-color: #41aaeb;
+    }
+    .game:-webkit-full-screen {
+    background-color: #41aaeb;
+    width: 100vw;
+    height: 100vh;
+    }
+    .game:-webkit-full-screen p {
+    visibility: visible;
+    }
+    .game:-moz-full-screen {
+    background-color: #41aaeb;
+    width: 100vw;
+    height: 100vh;
+    }
+    .game:-moz-full-screen p {
+    visibility: visible;
+    }
+    .game:-ms-fullscreen {
+    background-color: #41aaeb;
+    width: 100vw;
+    height: 100vh;
+    }
+    .game:-ms-fullscreen p {
+    visibility: visible;
+    }
+    .game:fullscreen {
+    background-color: #41aaeb;
+    width: 100vw;
+    height: 100vh;
+    }
+    .game:fullscreen p {
+    visibility: visible;
+    }

@@ -1,12 +1,13 @@
 const config = {
     type: Phaser.AUTO,
     parent: 'game',
-    width: 3000,
-    heigth: 1500,
+    width: 2560,
+    heigth: 1600,
     scale: {
       mode: Phaser.Scale.RESIZE,
       autoCenter: Phaser.Scale.CENTER_BOTH,
-      zoom: 2,
+      parent: 'game',
+      zoom: 0.8,
     },
     scene: {
       preload,
@@ -35,7 +36,7 @@ const config = {
 
     this.load.atlas('player', 'assets/images/perso.png',
       'assets/images/perso_atlas.json');
-  }
+}
   
   function create() {
 
@@ -48,20 +49,19 @@ const config = {
     backgroundImage.setScale(10, 1.8);
  
     const platforms = map.createStaticLayer('Platforms', tileset, 0, 200);
-    const water = map.createStaticLayer('Water', tileset, -1025, 1225);
+    const water = map.createStaticLayer('Water', tileset, 0, 200);
  
     platforms.setCollisionByExclusion(-1, true);
   
    
-    this.player = this.physics.add.sprite(50, 1000, 'player');
+    this.player = this.physics.add.sprite(50, 700, 'player');
     this.player.setBounce(0.1); 
-    this.player.setCollideWorldBounds(true); 
+    // this.player.setCollideWorldBounds(true); 
     this.physics.add.collider(this.player, platforms);
     this.player.setScale(1, 1);
     this.cameras.main.setBounds(0, 0, backgroundImage.displayWidth, backgroundImage.displayHeigth);
     this.cameras.main.startFollow(this.player);
     
- 
     this.anims.create({
       key: 'male_character_walk1',
       frames: this.anims.generateFrameNames('player', {
