@@ -131,7 +131,7 @@
         {
          "columns":14,
          "firstgid":1,
-         "image":"..\/..\/..\/Downloads\/creating-a-platformer-with-phaser-3-master\/assets\/tilesets\/platformPack_tilesheet.png",
+         "image":"..\/..\/..\/creating-a-platformer-with-phaser-3-master\/assets\/tilesets\/platformPack_tilesheet.png",
          "imageheight":448,
          "imagewidth":896,
          "margin":0,
@@ -139,6 +139,16 @@
          "spacing":0,
          "tilecount":98,
          "tileheight":64,
+         "tiles":[
+                {
+                 "id":20,
+                 "properties":[
+                        {
+                         "name":"colides",
+                         "type":"bool",
+                         "value":true
+                        }]
+                }],
          "tilewidth":64
         }],
  "tilewidth":64,

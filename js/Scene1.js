@@ -1,8 +1,9 @@
-class Scene1 extends Phaser.Scene {
-    constructor() {
-      super("bootGame");
-    }
-  
+export default class Scene1 extends Phaser.Scene {
+      constructor(){
+          super("bootGame");
+      }
+
+      
     preload(){
         this.load.image("clown_méchan", "./assets/images/clown_qui_fe_peur.png");
 
@@ -73,7 +74,7 @@ class Scene1 extends Phaser.Scene {
         })
     
         gameButton.on("pointerup", ()=>{
-            this.scene.start("playGame");
+            this.scene.start("MainScene");
         })
     
         quitButton.on("pointerover", ()=>{
