@@ -54,9 +54,9 @@ export default class Scene1 extends Phaser.Scene {
         hoverSprite.setScale(0.4, 0.4);
         hoverSprite.setVisible(false);
     
-        // this.sound.play("squid_game_music", {
-        //   loop: false
-        // })
+        this.sound.play("squid_game_music", {
+          loop: false
+        })
     
     
         gameButton.setInteractive();
