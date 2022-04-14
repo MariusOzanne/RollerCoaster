@@ -4,7 +4,7 @@
 
 
 body{
-  background-color: gray;
+  background-color: #24262b;
   margin: 0;
   padding: 0;
 }
@@ -14,7 +14,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: #24262b;
   color: white;
 }
 
@@ -41,7 +41,7 @@ body{
 }
 
 .navbar-links li:hover{
-  background-color: #555;
+  background-color: #24262b;
 }
 
 .text{
@@ -54,7 +54,7 @@ body{
 
 .text h2{
   text-align: center;
-  color: black;
+  color: rgb(247, 243, 243);
 }
 
 .text p{
@@ -80,7 +80,7 @@ body{
 
 .members{
  text-align: center;
- color: black;
+ color: rgb(247, 243, 243);
 }
 
 .members img{
@@ -230,7 +230,7 @@ body{
   font-size: 25px;
   padding: 7px;
   border: 2px solid;
-  color: #222;
+  color: #fff;
   text-decoration: none;
   border-color: rgb(185, 29, 29);
   margin-left: 40%;

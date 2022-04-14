@@ -78,6 +78,8 @@ const config = {
     this.load.atlas('player', 'assets/images/perso.png',
       'assets/images/perso_atlas.json');
 
+      this.load.audio("squid_game_music", "./assets/images/squid_game_ost.mp3");
+
     //this.load.spritesheet('stamina_bar', '', {frameWidth: 128, frameHeight: 32}); ---> trouver asset pour bar de stamina
 }
   
@@ -89,7 +91,7 @@ const config = {
 
     const backgroundImage = this.add.image(0, 0, 'background').setOrigin(0, 0);
 
-    backgroundImage.setScale(30, 1.5);
+    backgroundImage.setScale(10, 2);
  
     const platforms = map.createStaticLayer('Platforms', tileset, 0, 100);
     const water = map.createStaticLayer('Water', tileset, 0, 100);
@@ -97,7 +99,7 @@ const config = {
     platforms.setCollisionByExclusion(-1, true);
   
    
-    this.player = this.physics.add.sprite(50, 1100, 'player');
+    this.player = this.physics.add.sprite(50, 1500, 'player');
     this.player.setBounce(0.1); 
     // this.player.setCollideWorldBounds(true); 
     this.physics.add.collider(this.player, platforms);
@@ -150,7 +152,7 @@ const config = {
     });
   
     map.getObjectLayer('Spikes').objects.forEach((spike) => {
-      const spikeSprite = this.spikes.create(spike.x, spike.y + 100 - spike.height, 'spike').setOrigin(0);
+      const spikeSprite = this.spikes.create(spike.x, spike.y + 130 - spike.height, 'spike').setOrigin(0);
       spikeSprite.body.setSize(spike.width, spike.height - 20).setOffset(0, 20);
     });
 
@@ -168,27 +170,19 @@ const config = {
   
     this.physics.add.collider(this.player, this.spikes2, playerHit, null, this);
 
-    // this.spikes3 = this.physics.add.group({
-    //   allowGravity: false,
-    //   immovable: true
-    // });
-  
-    // map.getObjectLayer('Spikes3').objects.forEach((spike3) => {
-    //   const spikeSprite = this.spikes3.create(spike3.x -64, spike2.y + 160 - spike3.height, 'spike3').setOrigin(0);
-    //   spikeSprite.body.setSize(spike3.width, spike3.height - 20).setOffset(0, 20);
-    // });
-  
-    // this.physics.add.collider(this.player, this.spikes3, playerHit, null, this);
+    this.sound.play("squid_game_music", {
+      loop: true
+    })
   }
   
   function update() {
     if (this.cursors.left.isDown) {
-      this.player.setVelocityX(-450);
+      this.player.setVelocityX(-335);
       if (this.player.body.onFloor()) {
         this.player.play('walk', true);
       }
     } else if (this.cursors.right.isDown) {
-      this.player.setVelocityX(450);
+      this.player.setVelocityX(335);
       if (this.player.body.onFloor()) {
         this.player.play('walk', true);
       }
@@ -215,13 +209,12 @@ const config = {
    * @param {*} player - player sprite
    * @param {*} spike - spike player collided with
    * @param {*} spike2 - spike player collided with
-   * @param {*} spike3 - spike player collided with
    */
 
   function playerHit(player, spike) {
     player.setVelocity(0, 0);
-    player.setX(50);
-    player.setY(300);
+    player.setX(100);
+    player.setY(1100);
     player.play('idle', true);
     player.setAlpha(0);
     let tw = this.tweens.add({
