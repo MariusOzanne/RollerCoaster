@@ -70,6 +70,8 @@ const config = {
     this.load.image('tiles', 'assets/tilesets/platformPack_tilesheet.png');
 
     this.load.image('spike', 'assets/images/spike.png');
+    this.load.image('spike2', 'assets/images/spike2.png');
+    this.load.image('spike3', 'assets/images/spike3.png');
 
     this.load.tilemapTiledJSON('map', 'assets/tilemaps/level1.json');
 
@@ -87,15 +89,15 @@ const config = {
 
     const backgroundImage = this.add.image(0, 0, 'background').setOrigin(0, 0);
 
-    backgroundImage.setScale(10, 1.8);
+    backgroundImage.setScale(30, 1.5);
  
-    const platforms = map.createStaticLayer('Platforms', tileset, 0, 200);
-    const water = map.createStaticLayer('Water', tileset, 0, 200);
- 
+    const platforms = map.createStaticLayer('Platforms', tileset, 0, 100);
+    const water = map.createStaticLayer('Water', tileset, 0, 100);
+
     platforms.setCollisionByExclusion(-1, true);
   
    
-    this.player = this.physics.add.sprite(50, 700, 'player');
+    this.player = this.physics.add.sprite(50, 1100, 'player');
     this.player.setBounce(0.1); 
     // this.player.setCollideWorldBounds(true); 
     this.physics.add.collider(this.player, platforms);
@@ -148,21 +150,45 @@ const config = {
     });
   
     map.getObjectLayer('Spikes').objects.forEach((spike) => {
-      const spikeSprite = this.spikes.create(spike.x, spike.y + 200 - spike.height, 'spike').setOrigin(0);
+      const spikeSprite = this.spikes.create(spike.x, spike.y + 100 - spike.height, 'spike').setOrigin(0);
       spikeSprite.body.setSize(spike.width, spike.height - 20).setOffset(0, 20);
     });
-  
+
     this.physics.add.collider(this.player, this.spikes, playerHit, null, this);
+
+    this.spikes2 = this.physics.add.group({
+      allowGravity: false,
+      immovable: true
+    });
+  
+    map.getObjectLayer('Spikes2').objects.forEach((spike2) => {
+      const spikeSprite = this.spikes2.create(spike2.x -64, spike2.y + 160 - spike2.height, 'spike2').setOrigin(0);
+      spikeSprite.body.setSize(spike2.width, spike2.height - 20).setOffset(0, 20);
+    });
+  
+    this.physics.add.collider(this.player, this.spikes2, playerHit, null, this);
+
+    // this.spikes3 = this.physics.add.group({
+    //   allowGravity: false,
+    //   immovable: true
+    // });
+  
+    // map.getObjectLayer('Spikes3').objects.forEach((spike3) => {
+    //   const spikeSprite = this.spikes3.create(spike3.x -64, spike2.y + 160 - spike3.height, 'spike3').setOrigin(0);
+    //   spikeSprite.body.setSize(spike3.width, spike3.height - 20).setOffset(0, 20);
+    // });
+  
+    // this.physics.add.collider(this.player, this.spikes3, playerHit, null, this);
   }
   
   function update() {
     if (this.cursors.left.isDown) {
-      this.player.setVelocityX(-400);
+      this.player.setVelocityX(-450);
       if (this.player.body.onFloor()) {
         this.player.play('walk', true);
       }
     } else if (this.cursors.right.isDown) {
-      this.player.setVelocityX(400);
+      this.player.setVelocityX(450);
       if (this.player.body.onFloor()) {
         this.player.play('walk', true);
       }
@@ -188,6 +214,8 @@ const config = {
    * playerHit resets the player's state when it dies from colliding with a spike
    * @param {*} player - player sprite
    * @param {*} spike - spike player collided with
+   * @param {*} spike2 - spike player collided with
+   * @param {*} spike3 - spike player collided with
    */
 
   function playerHit(player, spike) {
@@ -204,4 +232,4 @@ const config = {
       repeat: 5,
     });
   }
-  
+ 

@@ -4,8 +4,8 @@ body {
 }
     .game {
     padding: 10px;
-    height: 400px;
-    width: 500px;
+    height: 1600px;
+    width: 6000px;
     background-color: #41aaeb;
     }
     .game:-webkit-full-screen {
