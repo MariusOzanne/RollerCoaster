@@ -202,6 +202,8 @@ const config = {
     } else if (this.player.body.velocity.x < 0) {
       this.player.setFlipX(true);
     }
+
+    // playerFall(this.player);
   }
   
   /**
@@ -224,5 +226,10 @@ const config = {
       ease: 'Linear',
       repeat: 5,
     });
-  }
- 
+
+  
+    // if(player.y > 2500){
+    //   player.setX(100);
+    //   player.setY(1100);
+    //   }
+    }
