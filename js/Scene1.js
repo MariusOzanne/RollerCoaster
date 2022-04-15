@@ -1,23 +1,24 @@
+
 export default class Scene1 extends Phaser.Scene {
       constructor(){
-          super("bootGame");
+          super("menu");
       }
 
       
     preload(){
-        this.load.image("clown_méchan", "./assets/images/clown_qui_fe_peur.png");
+        this.load.image("clown_méchan", "./assets/clown_qui_fe_peur.png");
 
-        this.load.image("clown", "./assets/images/clown.jpg");
+        this.load.image("clown", "./assets/clown.jpg");
     
-        this.load.image("new_game", "./assets/images/newgame.png");
+        this.load.image("new_game", "./assets/newgame.png");
     
-        this.load.image("quit", "./assets/images/quit.png");
+        this.load.image("quit", "./assets/quit.png");
     
-        this.load.image("squid_game", "./assets/images/squid_game.png");
+        this.load.image("squid_game", "./assets/squid_game.png");
     
-        this.load.audio("squid_game_music", "./assets/images/squid_game_ost.mp3");
+        this.load.audio("squid_game_music", "./assets/squid_game_ost.mp3");
     
-        this.load.audio("clown_laugh", "./assets/images/laugh.mp3");
+        this.load.audio("clown_laugh", "./assets/laugh.mp3");
     
     
         let loadingBar = this.add.graphics({
@@ -55,7 +56,7 @@ export default class Scene1 extends Phaser.Scene {
         hoverSprite.setVisible(false);
     
         // this.sound.play("squid_game_music", {
-        //   loop: false
+        //   loop: true
         // })
     
         gameButton.setInteractive();
@@ -73,7 +74,7 @@ export default class Scene1 extends Phaser.Scene {
         })
     
         gameButton.on("pointerup", ()=>{
-            this.scene.start("MainScene");
+            this.scene.start("main");
         })
     
         quitButton.on("pointerover", ()=>{
@@ -92,4 +93,3 @@ export default class Scene1 extends Phaser.Scene {
         })
     } 
 }
-  
